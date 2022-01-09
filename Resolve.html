@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function calculate(a, b, action) {
+
+        if (action === '+') {
+            return a + b;
+        } else if (action === '-') {
+            return a - b;
+        } else if (action === '*') {
+            return a * b;
+        } else if (action === '/') {
+            return a / b;
+        } else return 0;
+    }
+
+
+    // setTimeout(function () {
+    //     let result1 = calculate(10, 20, '+');
+    //     console.log(result1);
+    //     setTimeout(function () {
+    //         let result2 = calculate(result1, 50, '+');
+    //         console.log(result2);
+    //     }, 2000);
+    //
+    // }, 2000);
+
+    // let promise = new Promise(function (resolve, reject) {
+    //
+    //     setTimeout(function () {
+    //         let result = calculate(10, 20, '+');
+    //         resolve(result);
+    //     }, 2000);
+    //
+    // });
+    //
+    // promise.then(function (value) {
+    //     console.log(value);
+    //     return new Promise(resolve => {
+    //         setTimeout(function () {
+    //             let reusult2 = calculate(value, 50, '+');
+    //             console.log(reusult2);
+    //             resolve(reusult2);
+    //         }, 2000)
+    //     })
+    //     })
+    //     .then(value => {
+    //         return new Promise(resolve => {
+    //             setTimeout(function () {
+    //                 let result3 = calculate(value, 20, '+');
+    //                 console.log(result3);
+    //                 resolve(result3);
+    //             }, 2000);
+    //         })
+    //     })
+    //     .then(value => {
+    //     setTimeout(function () {
+    //         let result4 = calculate(value, 50, '+');
+    //         console.log(result4);
+    //     }, 2000);
+    // });
+
+    function asyncFoo (msg, timeout) {
+
+        return new Promise(resolve => {
+            setTimeout(function () {
+                console.log(msg);
+                resolve('result test promis');
+            }, timeout)
+        })
+    }
+
+    Promise.all([asyncFoo('Hello', 5000), asyncFoo('Hi', 3000)]).then(value => {
+        console.log('done', value);
+    });
+
+
+
+</script>
+</body>
+</html>

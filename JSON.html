@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let user = {name: 'vasya', age: 23};
+    let stringify = JSON.stringify(user);
+    console.log(stringify);
+
+    let pars = JSON.parse(stringify);
+    console.log(pars);
+
+    fetch('https://jsonplaceholder.typicode.com/albums')
+    .then(album => album.json())
+    .then(album => {
+
+
+        for (const albumElement of album) {
+            let divElement = document.createElement('div');
+            divElement.innerText = `${albumElement.id}---${albumElement.title}--${albumElement.userId}`;
+            document.body.appendChild(divElement);
+
+        }
+
+
+    })
+
+</script>
+
+</body>
+</html>

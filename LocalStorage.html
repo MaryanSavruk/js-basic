@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+
+    // localStorage.setItem('key', 'value');
+    // localStorage.setItem('key', 'qweasd');
+
+    localStorage.setItem('user', JSON.stringify({name: 'Vasya'}));
+
+    // localStorage.clear();
+    let item = localStorage.getItem('user');
+    console.log(item);
+
+
+    let users = [
+        {name: 'Olko', age: 33, status: true},
+        {name: 'Lola', age: 14, status: false},
+        {name: 'Olya', age: 45, status: true},
+        {name: 'Ivan', age: 54, status: false},
+        {name: 'stepan', age: 213, status: false},
+        {name: 'Dgon', age: 76, status: true},
+        {name: 'Oleg', age: 55, status: false},
+        {name: 'Ferdinand', age: 43, status: true},
+        {name: 'Micle', age: 47, status: false},
+        {name: 'Dima', age: 26, status: true},
+        {name: 'Krek', age: 43, status: true}
+    ];
+
+    for (const user of users) {
+        let div = document.createElement('div');
+        div.innerText = JSON.stringify(user);
+        let btn = document.createElement('button');
+        btn.innerText = 'add to favorites';
+        div.appendChild(btn);
+
+
+
+
+
+        btn.onclick = function(e) {
+            let favorite = JSON.parse(localStorage.getItem('favorite'));
+            if (Array.isArray(favorite) && localStorage.getItem('favorite') != null) {
+                favorite.push(user);
+                localStorage.setItem('favorite',JSON.stringify(favorite));
+            } else {
+                let userFavArray = [];
+                userFavArray.push(user);
+                localStorage.setItem('favorite', JSON.stringify(userFavArray));
+            }
+
+        }
+
+        document.body.appendChild(div);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<input type="text" id="input">
+<hr>
+<input type="checkbox" id="cbox">
+<button>click me</button>
+
+<div class="resolved"></div>
+<script>
+    let button = document.getElementsByTagName('button');
+    let btn = button[0];
+
+    // btn.onclick = function (eventListenerObject) {
+    //     console.log('Click');
+    // };
+    //  btn.onclick = function (eventListenerObject) {
+    //     console.log(eventListenerObject);
+    // };
+    //  btn.onclick = function (eventListenerObject) {
+    //     console.log('Hello');
+    // };
+
+    btn.addEventListener('click', function (e) {
+        console.log(e);
+        console.log('Click');
+    });
+    btn.addEventListener('click', function (e) {
+            console.log(e);
+            console.log('Hello');
+        });
+
+    document.getElementById('input').oninput = function (e) {
+        btn.innerText = this.value;
+    }
+    let users = [
+        {name: 'Olya', age: 45, status: true},
+        {name: 'Ivan', age: 54, status: false},
+        {name: 'Olko', age: 54, status: true},
+        {name: 'stepan', age: 13, status: false},
+        {name: 'Dgon', age: 76, status: true},
+        {name: 'Oleg', age: 55, status: false},
+        {name: 'Ferdinand', age: 43, status: true},
+        {name: 'Mary', age: 31, status: true},
+        {name: 'Micle', age: 47, status: false},
+        {name: 'Dima', age: 26, status: true},
+        {name: 'Poter', age: 26, status: true},
+        {name: 'Krek', age: 43, status: true}
+    ];
+
+    let resolved = document.getElementsByClassName('resolved')[0];
+    for (user of users) {
+        let div = document.createElement('div');
+        div.innerText = JSON.stringify(user)
+        resolved.appendChild(div);
+    }
+
+
+    let cbox = document.getElementById('cbox');
+    cbox.onclick = function () {
+        resolved.innerText = '';
+        if (cbox.checked) {
+            for (user of users) {
+                let div = document.createElement('div');
+                div.innerText = JSON.stringify(user)
+                resolved.appendChild(div);
+            }
+        } else {
+            for (user of users) {
+                if (!user.status) {
+                    let div = document.createElement('div');
+                    div.innerText = JSON.stringify(user)
+                    resolved.appendChild(div);
+                }
+
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

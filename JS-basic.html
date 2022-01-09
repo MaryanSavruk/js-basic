@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .user {
+            width: 200px;
+            background: #c0c0c0;
+            margin-bottom: 5px;
+        }
+        .color {
+            background: #d4d2d2;
+        }
+        .name {
+            background: #939393;
+        }
+        .age {
+            background: #636262;
+        }
+        .square {
+            background: black;
+            width: 600px;
+            height: 600px;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--Class -->
+<script>
+
+    // class User {
+    //     constructor(name, age) {
+    //         this.age = age;
+    //         this.name = name;
+    //     }
+    //     greeting(msg) {
+    //         console.log(`${msg} my name is ${this.name} my age is ${this.age}`);
+    //     }
+    // }
+    //
+    // let user = new User('Andriy', 40);
+    // console.log(user);
+    //
+    // class Customer extends User {
+    //     constructor(name, age, status) {
+    //         super(name, age);
+    //         this.status = status;
+    //     }
+    // }
+    // let customer = new Customer('Anya', 28, true);
+    // console.log(customer);
+    // customer.greeting('Hi');
+    //
+    // class Admin extends Customer {
+    //     constructor(name, age, city) {
+    //         super(name, age);
+    //         this.city = city;
+    //     }
+    // }
+    //
+    // let admin = new Admin('Vovan', 56, 'Kyiv');
+    // console.log(admin);
+    // admin.greeting('Privet')
+
+
+</script>
+
+
+<!--getters and setters-->
+<script>
+    // function createUser () {
+    //     let user = {name: "Vova", age: 34};
+    //     return {
+    //         getName: function () {
+    //             return user.name;
+    //         },
+    //         getAge: function () {
+    //             return user.age;
+    //         },
+    //         setName: function (name) {
+    //             return user.name = name;
+    //         },
+    //         setAge: function (age) {
+    //             return user.age = age;
+    //         }
+    //     }
+    //
+    // }
+    //
+    // let user = createUser();
+    // console.log(user.name = 'efefefeefef');
+    // console.log(user.getName());
+    // console.log(user.getAge());
+    // console.log('----------------------');
+    // console.log(user.setName('Kokos'));
+    // console.log(user.setAge(90));
+</script>
+
+<!--Consructors-->
+<script>
+
+    // let users = [
+    //     new User('Britny', 41, true),
+    //     {name: 'Olya', age: 45, status: true},
+    //     {name: 'Ivan', age: 54, status: false},
+    //     {name: 'stepan', age: 213, status: false},
+    //     {name: 'Dgon', age: 76, status: true},
+    //     {name: 'Oleg', age: 55, status: false},
+    //     {name: 'Ferdinand', age: 43, status: true},
+    //     {name: 'Micle', age: 47, status: false},
+    //     {name: 'Dima', age: 26, status: true},
+    //     {name: 'Krek', age: 43, status: true}
+    // ];
+    //
+    // function User(name, age, status) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.status = status;
+    //     this.greeting = function (msg) {
+    //         console.log(`${msg} my name is ${this.name}`)
+    //     }
+    // }
+    //
+    // let user = new User('Kokos', 90, true);
+    // console.log(user);
+    // user.greeting('Hello');
+    // //            *********  Композиція ***************
+    // function UserWithWife(name, age, wife={name: 'Tina', age: 21}) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.wife = wife;
+    // }
+    // let userWithWife = new UserWithWife('Oleg', 21, {name: "Olya", age: 21});
+    // console.log(userWithWife);
+    //
+    // function UserWithWifeAgreg(name, age, wName, wAge) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.wife = {name: wName, age: wAge}
+    // }
+    //
+    // let userWithWifeAgreg = new UserWithWifeAgreg('Mykytos', 33, 'Mykytosa', 33);
+    // console.log(userWithWifeAgreg);
+
+</script>
+
+
+<!--DOM Events-->
+
+<!--    <input type="checkbox" id="cbox">-->
+<!--    <div class="list"></div>-->
+<script>
+    // let users = [
+    //
+    //     {name: 'Olya', age: 45, status: true},
+    //     {name: 'Ivan', age: 54, status: false},
+    //     {name: 'stepan', age: 213, status: false},
+    //     {name: 'Opo', age: 12, status: false},
+    //     {name: 'Dgon', age: 76, status: true},
+    //     {name: 'Oleg', age: 55, status: false},
+    //     {name: 'Ferdinand', age: 43, status: true},
+    //     {name: 'Doda', age: 978, status: false},
+    //     {name: 'Micle', age: 47, status: false},
+    //     {name: 'Dima', age: 26, status: true},
+    //     {name: 'Krek', age: 43, status: true}
+    // ];
+    //
+    //
+    //     let block = document.getElementsByClassName('list')[0];
+    // for (const user of users) {
+    //     let div = document.createElement('div');
+    //     div.innerText = JSON.stringify(user);
+    //     block.appendChild(div);
+    // }
+    //
+    // let element = document.getElementById('cbox');
+    // element.onclick = function () {
+    //     block.innerText = '';
+    //         if (element.checked) {
+    //             for (const user of users) {
+    //                 if (user.status) {
+    //                     let div = document.createElement('div');
+    //                     div.innerText = JSON.stringify(user);
+    //                     block.appendChild(div);
+    //                 }
+    //             }
+    //         } else {
+    //             for (const user of users) {
+    //                 let div = document.createElement('div');
+    //                 div.innerText = JSON.stringify(user);
+    //                 block.appendChild(div);
+    //             }
+    //
+    //         }
+    //
+    // }
+
+</script>
+
+
+<!--DOME Node vs Element-->
+
+<!--    <a href="" id="x">anchor</a>-->
+<!--    <a href="" id="x">anchor</a>-->
+<!--    <div class="target">Lorem</div>-->
+<!--    <div class="target">ipsum</div>-->
+
+<script>
+    // let element = document.querySelector('#x');
+    // console.log(element);
+    // let elementNodeList = document.querySelectorAll('#x');
+    // console.log(elementNodeList);
+    //
+    // let childNodes = document.body.childNodes;
+    // console.log(childNodes);
+    // let children = document.body.children;
+    // console.log(children);
+
+
+</script>
+
+<!--Loop + Array-->
+
+<!--    <div id="container"></div>-->
+<script>
+
+// let users = [
+//     {color: 'red', name: 'Olya', age: 45, status: true},
+//     {color: 'orange', name: 'Ivan', age: 54, status: false},
+//     {color: 'blue', name: 'Koka', age: 14, status: true},
+//     {color: 'pink', name: 'stepan', age: 213, status: false},
+//     {color: 'brown', name: 'Dgon', age: 76, status: true},
+//     {color: '#214b21', name: 'Oleg', age: 55, status: false},
+//     {color: '#661f43', name: 'Ferdinand', age: 43, status: true},
+//     {color: 'red', name: 'Micle', age: 47, status: false},
+//     {color: 'yellow', name: 'Dima', age: 26, status: true},
+//     {color: 'purple', name: 'Krek', age: 43, status: true}
+// ];
+
+
+    // for (let i = 0; i < users.length; i++) {
+    //     let div = document.createElement('div');
+    //     div.innerText = `iteration ${i}`;
+    //     document.body.appendChild(div);
+    // }
+
+    // let container = document.getElementById('container');
+// for (const user of users) {
+//     let divElement = document.createElement('div');
+//     divElement.style.backgroundColor = user.color;
+//     divElement.innerText = `${user.name} - ${user.age} - ${user.status}`
+//
+//
+//     // document.body.appendChild(divElement);
+//     container.appendChild(divElement);
+// }
+//     let container = document.getElementById('container');
+//     for (const user of users) {
+//         let outerDiv = document.createElement('div');
+//         outerDiv.classList.add('user');
+//
+//         for (const field in user) {
+//            let innerDiv = document.createElement('div');
+//
+//                innerDiv.innerText = `${user[field]}`;
+//                innerDiv.classList.add(field);
+//
+//                outerDiv.appendChild(innerDiv);
+//
+//
+//         }
+//
+//         container.appendChild(outerDiv);
+//         }
+
+</script>
+
+
+<!--RGB-->
+
+<div class="square"></div>
+
+
+<script>
+
+    // let element = document.querySelector('.square');
+    // element.addEventListener('mousemove', function (e) {
+    //     let r = e.screenX;
+    //     let g = e.screenY;
+    //     let b = Math.floor((r+g)/2 - r)
+    //     console.log(r, g, b)
+    //
+    //     element.style.background = `rgb(${r}, ${g}, ${b})`
+    // })
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function name(arg1, arg2) {
+
+    }
+
+    function appender (type, content) {
+
+        let element = document.createElement(type);
+        element.innerText = content;
+        document.body.appendChild(element);
+    }
+
+    appender('div', 'Hello guys!!!');
+    appender('h2', 'Title');
+
+</script>
+
+</body>
+</html>
