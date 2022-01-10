@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let s = 'Lorem ipsum in dolor sit';
+    let indexOf = s.indexOf('o');
+    console.log(indexOf);
+
+    let lastIndexOf = s.lastIndexOf('o');
+    console.log(lastIndexOf);
+
+    let charAt = s.charAt(1);
+    console.log(charAt);
+
+    // let replace = s.replace('o', '!!!!!');
+    // console.log(replace);
+    let replace = s.replace(/l/g, '!!!!!');
+    console.log(replace);
+
+    let slice = s.slice(2, 8);
+    console.log(slice);
+
+    let split = s.split(' ');
+    console.log(split);
+
+    let toUpperCase = s.toUpperCase();
+    console.log(toUpperCase);
+
+    let toLowerCase = toUpperCase.toLowerCase();
+    console.log(toLowerCase);
+
+    let startsWith = s.startsWith('Lo'); //true
+    console.log(startsWith);
+    let startsWith1 = s.startsWith('lo'); //false
+    console.log(startsWith1);
+
+    let endsWith = s.endsWith('sit'); //true
+    console.log(endsWith);
+
+    let includes = s.includes('sum'); //true
+    console.log(includes);
+    let includes = s.includes(' sum'); //false
+    console.log(includes);
+
+
+</script>
+
+</body>
+</html>
