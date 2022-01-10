@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // function rec(i) {
+    //     console.log(i);
+    //     i++;
+    //     setTimeout(function () {
+    //         rec(i);
+    //     }, 3000)
+    // }
+    // rec(0);
+
+        let user = {
+            name: 'Vasya',
+            age: 43,
+            adress: {
+                street: 'Franka',
+                number: 12,
+                house: {
+                    floor: 4,
+                    age: 123,
+                    room: {
+                        number: 45,
+                        code: '3432AS'
+                    }
+                }
+            }
+        };
+
+        function exploreUser(user) {
+            for (const userKey in user) {
+                if (typeof user[userKey] == 'object') {
+                console.log(user[userKey]);
+                exploreUser(user[userKey]);
+
+                }
+            }
+        }
+
+
+        exploreUser(user);
+
+</script>
+
+</body>
+</html>
