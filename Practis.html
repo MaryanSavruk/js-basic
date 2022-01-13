@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // console.log(132 > 100 && 45 < 12 );  // false
+    // console.log(34 > 33 && 23 < 90 ); // true
+    // console.log(99 > 100 && 45 > 12 ); // false
+    // console.log(132 > 100 || 45 < 12 ); // true
+    // console.log(111 > 11 || 45 < 111 ); // true
+    // console.log((111 > 11 || 45 < 111) && (132 > 100 || 45 < 12) ); // true
+    // console.log((111 > 11 || 45 < 56) || (132 > 100 || 45 < 12) ); // true
+    // console.log((132 > 100 && 45 < 12 ) && (132 > 100 || 45 < 12 ) ); //  false
+    // console.log((111 > 11 || 45 < 111) || (99 > 100 && 45 > 12 )); // true
+    // console.log('-----------------------------------------------')
+    // console.log(!!'-1'); // true
+    // console.log(!!-1); // true
+    // console.log(!!'0'); // true
+    // console.log(!!'null'); // true
+    // console.log(!!'undefined'); // true
+    // console.log(!!(3/'owu')); // NaN false
+    // console.log((111 > 11 || 45 < 111) ||  !!'0'); // true
+    // console.log((!!111 == !!11 || 45 < 111) && (99 > 100 && 45 > 12 )); // false
+
+   // 10. Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+    let str = "20";
+    let a = 5;
+    document.write(str + a + "<br/>"); // 205
+    document.write(str - a + "<br/>"); // 15
+    document.write(str * "2" + "<br/>"); // 40
+    document.write(str / 2 + "<br/>"); // 10
+
+   // 11. Какие значения выведет в окно консоли следующий фрагмент кода если его поместить в console.log?
+
+    console.log(parseInt("3.14"));  // 3
+    console.log(parseInt("-7.875")); // 7
+    console.log(parseInt("435")); // 435
+    console.log(parseInt("Вася"));  // NaN
+
+    // 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст,
+    // а вам не обходимо вывести строку такого вида
+    // Доброго вечера Иван Иванов, мои поздравления что вам 32 , а вывод результата при помощи метода alert
+
+    let name = prompt('Введіть ім\'я');
+    let surname = prompt('Введіть прізвище');
+    let age = prompt('Введіть вік');
+
+    alert(`Добрий вечір ${name} ${surname}, мої вітання, що вам ${age}`);
+
+    //Три різних числа вводяться через prompt().
+    // За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+    let s1 = prompt('Enter number 1');
+    let s2 = prompt('Enter number 2');
+    let s3 = prompt('Enter number 3');
+
+    let arr = [s1, s2, s3];
+
+    function foo(array) {
+       let sort = array.sort(function (a, b) {
+            return a - b;
+        })
+        console.log(JSON.stringify(sort));
+    };
+    foo(arr);
+
+
+</script>
+
+
+</body>
+</html>
