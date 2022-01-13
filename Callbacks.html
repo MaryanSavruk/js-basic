@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let numbers = [11, -1, 12, 45, 0];
+    // let resultNumbers = numbers.sort();
+    // console.log(resultNumbers);
+
+    let sort = numbers.sort(function (a, b) {});
+    console.log(sort);
+
+    numbers.filter(function (num) {
+        if (num % 2 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    let numberWithSurprise = [11, -1, 'surprise', 0, 45];
+    let find = numberWithSurprise.find(element => typeof element === 'string');
+    console.log(find);
+
+    let users = [
+        {name: 'Olya', age: 45, status: true, adress: {street: 'Franka' , house: 21}},
+        {name: 'Ivan', age: 54, status: false, adress: {street: 'Patona' , house: 45}},
+        {name: 'Olko', age: 54, status: true, adress: {street: 'Shevchenka' , house: 56}},
+        {name: 'stepan', age: 13, status: false, adress: {street: 'Dudaeva' , house: 1}},
+        {name: 'Dgon', age: 76, status: true, adress: {street: 'Galytska' , house: 31}},
+        {name: 'Oleg', age: 55, status: false, adress: {street: 'Suhivska' , house: 43}},
+        {name: 'Ferdinand', age: 43, status: true, adress: {street: 'Dniprovska' , house: 51}},
+        {name: 'Mary', age: 31, status: true, adress: {street: 'Dgerelna' , house: 143}},
+        {name: 'Micle', age: 47, status: false, adress: {street: 'Pohulyanka' , house: 76}},
+        {name: 'Dima', age: 26, status: true, adress: {street: 'Franka' , house: 90}},
+        {name: 'Poter', age: 26, status: true, adress: {street: 'Luchakivska' , house: 51}},
+        {name: 'Krek', age: 43, status: true, adress: {street: 'Hnatyuka' , house: 71}}
+    ];
+
+    let sort1 = users.sort((user1, user2) => user1.adress.house - user2.adress.house);
+    console.log(sort1);
+
+    function calculate(a, b, callback) {
+        console.log(callback(a, b));
+    }
+    calculate(10, 20, function (a, b) {
+        return a + b;
+    });
+    calculate(10, 20, function (a, b) {
+        return a - b;
+    });
+
+
+
+  function customPrintArray (array, callback){
+        console.log(callback(array));
+    };
+
+    customPrintArray([2, 5, 0, 9, 1, 4], function (arr) {
+        for (const arrElement of arr) {
+            console.log(arrElement);
+        }
+    });
+
+</script>
+
+</body>
+</html>
