@@ -32,7 +32,6 @@
         return s;
         };
 
-    let itar = Math.floor(Math.random() * 11)
 
     for (let i = 0; i < 10; i++) {
         let innetText = randomstring(i + 5);
@@ -41,6 +40,39 @@
         divElement.innerText = innetText;
         document.body.appendChild(divElement);
     }
+
+    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+
+    let iter = 0;
+    while (iter < 20) {
+        let element = document.createElement('h1');
+        element.innerText = randomstring(iter + 5);
+        document.body.append(element);
+        iter++;
+    };
+
+    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+
+    let itar = 0;
+    while (itar < 20) {
+        let element = document.createElement('h1');
+        element.innerText = `Iter ${iter} `+ randomstring(iter + 5);
+        document.body.append(element);
+        itar++;
+    };
+    // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+    let h, m, s;
+
+    for (h =0; h < 2; h++) {
+        for ( m = 0; m < 60; m++){
+            for (s = 0; s < 60; s++) {
+                console.log(h + ':' + m + ':' + s);
+            };
+        };
+    };
+
+
 
 
 </script>
