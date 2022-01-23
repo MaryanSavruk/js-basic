@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // let str = '012345678';
+    // console.log(str.slice(0, 5));
+    // let userNames = 'Olga,Ivan,Kristi,Oleg'
+    //                // ['Olga','Ivan','Kristi','Oleg']
+    //
+    //
+    // let strings = userNames.split(',');
+    // console.log(strings);
+
+    // let ages = [26, 19, 10, 16, 28];
+    //
+    // let s = ages.join(' !=! ');
+    //
+    // console.log(s);
+
+    // let email = '          victor.fzs@gmail.com';
+    // let email2 = ' victor.fzs@gmail.com           ';
+    // console.log(email);
+    // console.log(email.trim());
+    // console.log(email2);
+    // console.log(email2.length)
+    // console.log(email2.trim());
+    // console.log(email2.length)
+
+    // let email = 'victor.kmin@gmail.com'
+    // let b = email.includes('@');
+    // console.log(b)
+
+    // function myFunction(item = '', price = '') {
+    //   console.log(item)
+    //   document.write(`I am function with ${item} for ${price}UAH`);
+    //   document.write('<hr>');
+    // }
+    //
+    // myFunction('Bread', 20);
+    // myFunction('Eggs')
+    // myFunction(false)
+    // myFunction(['Beer', 'Fish', 'Aspirin'])
+
+    // let arr = [
+    //   {
+    //     id: 1,
+    //     name: 'Karina',
+    //     age: 15,
+    //     car: true
+    //   },
+    //   {
+    //     id: 2,
+    //     name: 'Doma',
+    //     age: 15,
+    //     car: true
+    //   },
+    //   {
+    //     id: 3,
+    //     name: 'Vlad',
+    //     age: 15,
+    //     car: true
+    //   }
+    // ]
+    //
+    // let karina = {
+    //   id: 1,
+    //   name: 'Karina',
+    //   age: 15,
+    //   car: true
+    // }
+    //
+    // function xxx(user = {}, note = '', phone = '') {
+    //   console.log('_+++++++++++++_');
+    //   console.log(user);
+    //   console.log(note);
+    //   console.log(phone);
+    //   console.log('_+++++++++++++_');
+    //
+    //   console.log('____________')
+    //   console.log(user.age)
+    // }
+
+    // xxx(3);
+    // xxx(karina, 'Hello user');
+    // xxx({name: 'Ivan'}, 'Hello ded', '_84328423');
+    // xxx();
+
+
+    // function findUserById(userId) {
+    //   for (const user of arr) {
+    //     if (user.id === userId) {
+    //       console.log(user);
+    //       break;
+    //     }
+    //   }
+    // }
+    //
+    //
+    // findUserById(2)
+
+    // let arr = [
+    //   {
+    //     id: 1,
+    //     name: 'Karina',
+    //     age: 15,
+    //     car: true
+    //   },
+    //   {
+    //     id: 2,
+    //     name: 'Doma',
+    //     age: 15,
+    //     car: true
+    //   },
+    //   {
+    //     id: 3,
+    //     name: 'Vlad',
+    //     age: 15,
+    //     car: true
+    //   }
+    // ]
+    //
+    // let karina = {
+    //   id: 1,
+    //   name: 'Karina',
+    //   age: 15,
+    //   car: true
+    // }
+    //
+    // function xxx(user = {}, note = '', phone = '') {
+    //   console.log('_+++++++++++++_');
+    //   console.log(user);
+    //   console.log(note);
+    //   console.log(phone);
+    //   console.log('_+++++++++++++_');
+    //
+    //   console.log('____________')
+    //   console.log(user.age)
+    // }
+    //
+    // function emailSender() {
+    //   for (let i = 0; i < arguments.length; i++) {
+    //     const userMail = arguments[i];
+    //
+    //     if (!userMail.includes('@')) {
+    //       console.log(`${userMail} is not valid`);
+    //       continue;
+    //     }
+    //
+    //     document.write(`Weclome on boad, ${userMail}`);
+    //     document.write(`<hr>`);
+    //   }
+    // }
+    //
+    // emailSender(
+    //   'ivam@gmail.com',
+    //   'dima@gmail.com',
+    //   'taras@gmail.com',
+    //   'dima2gm,ail.com',
+    //   'XXXanohilayato2005XXX'
+    //   )
+
+    // function moneyCalculator(dollars, curs) {
+    //     console.log('Hello user.')
+    //     let uah = dollars * curs;
+    //
+    //     console.log('Обмінник дав мені->');
+    //     console.log(uah);
+    //
+    //     return uah;
+    // }
+    //
+    // let money = 100000;
+    //
+    // let changedMoney = moneyCalculator(2000, 27.4);
+    //
+    // money += changedMoney;
+    //
+    // console.log(money);
+    let str = '      Harry         Potter           ' // 'Harry Potter'
+    let str1 = '   Hermiona      Volta      ' // 'Hermiona Volta'
+    let str2 = '   John      Doe      ' // 'John Doe'
+
+
+    function nameNormalizator(nameToNormalize) {
+       let strings = nameToNormalize.replace(/\s+/g, ' ').trim();
+
+        console.log(strings)
+
+    }
+    console.log(nameNormalizator(str));
+    console.log(nameNormalizator(str1));
+    console.log(nameNormalizator(str2));
+
+
+</script>
+
+</body>
+</html>

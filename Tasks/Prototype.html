@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    function Person(first, last, age, gender, interests) {
+
+        // Определения методов и свойств
+        this.name = {
+            'first': first,
+            'last' : last
+        };
+        this.age = age;
+        this.gender = gender;
+        //...см. Введение в объекты для полного определения
+    }
+    person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+    // console.log((person1.__proto__));
+    // console.log(person1.__proto__.__proto__)
+    // console.log(Person.prototype);
+    // console.log(Object.prototype);
+    // console.log(String.prototype);
+
+    let person2 = Object.create(person1);
+    // console.log(person2.__proto__);
+    // console.log(Person.prototype);
+    // console.log(person1.constructor);
+    // console.log(person2.constructor);
+
+    let person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
+
+    console.log(person3.name.first);
+    console.log(person3.age);
+
+
+</script>
+
+
+</body>
+</html>
